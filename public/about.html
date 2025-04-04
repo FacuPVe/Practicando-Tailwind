@@ -2,63 +2,256 @@
 <html lang="en">
 
 <head>
+    <!-- Metadata and links to stylesheets and scripts -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - HopeBuilders</title>
     <link href="../dist/output.css" rel="stylesheet">
-    <title>About Us - Nonprofit</title>
+    <link href="../src/css/animations.css" rel="stylesheet">
+    <link rel="icon"
+        href="../src/assets/branding/logos/transparentfreepik-hand-drawn-holding-hands-non-profit-organization-logo-202503051912495Rcc.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+    <meta name="description"
+        content="Learn about HopeBuilders' story, leadership team, core values, and mission. Discover how we're building lasting change in communities worldwide.">
+    <meta name="keywords"
+        content="nonprofit, charity, about us, leadership team, core values, mission, community development">
+    <meta property="og:title" content="About Us - HopeBuilders">
+    <meta property="og:description" content="Our journey of compassion, innovation, and community transformation">
+    <meta property="og:image"
+        content="../src/assets/branding/logos/transparentfreepik-hand-drawn-holding-hands-non-profit-organization-logo-202503051912495Rcc.png">
 </head>
 
-<body class="font-sans bg-gray-100">
-    <header class="bg-blue-500 text-white p-6 text-center">
-        <h1 class="text-3xl">About Us</h1>
-        <nav class="mt-4">
-            <a href="home.html" class="text-blue-200 hover:underline mx-3">Home</a>
-            <a href="#" class="text-blue-200 hover:underline mx-3">About Us</a>
-            <a href="contact.html" class="text-blue-200 hover:underline mx-3">Contact</a>
-        </nav>
+<body class="min-h-screen bg-pink-50 text-gray-800 overflow-x-hidden">
+    <!-- Header with navigation -->
+    <header class="bg-white/90 backdrop-blur-md shadow-md p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-xl font-bold text-pink-800">HopeBuilders</span>
+            </div>
+            <!-- Desktop navigation menu -->
+            <nav class="hidden md:flex space-x-6" aria-label="Main navigation">
+                <a href="home.html" class="text-pink-700 hover:text-pink-900 transition">Home</a>
+                <a href="about.html" class="text-pink-700 hover:text-pink-900 transition">About</a>
+                <a href="programs.html" class="text-pink-700 hover:text-pink-900 transition">Programs</a>
+                <a href="donate.html" class="text-pink-700 hover:text-pink-900 transition">Donate</a>
+                <a href="contact.html" class="text-pink-700 hover:text-pink-900 transition">Contact</a>
+            </nav>
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-pink-700 hover:text-pink-900 transition"
+                aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
     </header>
 
-    <main class="p-8">
-        <section class="mb-8">
-            <h2 class="text-2xl mb-4">Our History</h2>
-            <p>Brief description of the NGO's history.</p>
+    <!-- Mobile menu overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="fixed left-0 w-full bg-white shadow-lg overflow-hidden">
+            <div class="p-6">
+                <!-- Mobile menu close button -->
+                <button id="close-mobile-menu" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+                <!-- Mobile navigation menu -->
+                <nav class="mt-8 space-y-4">
+                    <a href="home.html" class="block text-pink-700 hover:text-pink-900 transition">Home</a>
+                    <a href="about.html" class="block text-pink-700 hover:text-pink-900 transition">About</a>
+                    <a href="programs.html" class="block text-pink-700 hover:text-pink-900 transition">Programs</a>
+                    <a href="donate.html" class="block text-pink-700 hover:text-pink-900 transition">Donate</a>
+                    <a href="contact.html" class="block text-pink-700 hover:text-pink-900 transition">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <main class="overflow-x-hidden">
+        <!-- Hero section -->
+        <section class="bg-gradient-to-br from-pink-100 to-lavender-100 py-20 text-center opacity-0" id="mainContent">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl md:text-6xl font-bold text-mint-900 mb-6 animate-fade-in-up">
+                    About HopeBuilders
+                </h1>
+                <p class="text-xl text-gray-700 max-w-2xl mx-auto mb-8 animate-fade-in-up"
+                    style="animation-delay: 0.2s;">
+                    Our journey of compassion, innovation, and community transformation
+                </p>
+            </div>
         </section>
 
-        <section class="mb-8">
-            <h2 class="text-2xl mb-4">Our Mission</h2>
-            <p>Explanation of the NGO's mission and objectives.</p>
-        </section>
-
-        <section class="mb-8">
-            <h2 class="text-2xl mb-4">Our Team</h2>
-            <div class="grid grid-cols-3 gap-4">
-                <!-- Example Team Member 1 -->
-                <div class="bg-white p-4 shadow-lg rounded-lg">
-                    <img src="../src/img/image1.jpg" alt="Team Member 1" class="rounded-full w-32 h-32 mx-auto">
-                    <h3 class="text-lg text-center mt-4">Member Name 1</h3>
-                    <p class="text-center text-sm">Position 1</p>
-                </div>
-
-                <!-- Example Team Member 2 -->
-                <div class="bg-white p-4 shadow-lg rounded-lg">
-                    <img src="../src/img/image2.jpg" alt="Team Member 2" class="rounded-full w-32 h-32 mx-auto">
-                    <h3 class="text-lg text-center mt-4">Member Name 2</h3>
-                    <p class="text-center text-sm">Position 2</p>
-                </div>
-
-                <!-- Example Team Member 3 -->
-                <div class="bg-white p-4 shadow-lg rounded-lg">
-                    <img src="../src/img/image3.jpg" alt="Team Member 3" class="rounded-full w-32 h-32 mx-auto">
-                    <h3 class="text-lg text-center mt-4">Member Name 3</h3>
-                    <p class="text-center text-sm">Position 3</p>
+        <!-- Our Story section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-mint-900 mb-10" data-aos="fade-up">
+                    Our Story
+                </h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Story text content -->
+                    <div class="space-y-6 text-gray-700">
+                        <p data-aos="fade-right" data-aos-delay="100">
+                            Founded in 2010, HopeBuilders emerged from a shared vision to create meaningful change in
+                            underserved communities. What started as a small grassroots initiative has grown into a
+                            dynamic
+                            nonprofit dedicated to empowering people and fostering sustainable development.
+                        </p>
+                        <p data-aos="fade-right" data-aos-delay="200">
+                            Our founders recognized that true progress comes from collaborative efforts, local
+                            engagement,
+                            and holistic approaches to community challenges.
+                        </p>
+                        <p data-aos="fade-right" data-aos-delay="300">
+                            Today, we operate in over 50 countries, partnering with local communities to build
+                            sustainable
+                            solutions that address education, healthcare, economic development, and environmental
+                            challenges.
+                        </p>
+                    </div>
+                    <!-- Story image -->
+                    <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+                        <img src="../src/assets/images/about/pexels-rdne-6646775.jpg" alt="Our journey"
+                            class="rounded-lg shadow-xl w-full h-auto transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]">
+                    </div>
                 </div>
             </div>
         </section>
-    </main>
 
-    <footer class="bg-gray-700 text-white text-center p-4">
-        © 2023 Nonprofit. All rights reserved.
-    </footer>
+        <!-- Leadership Team section -->
+        <section class="py-16 bg-lavender-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-mint-900 mb-10" data-aos="fade-up">
+                    Our Leadership Team
+                </h2>
+                <!-- Team member cards -->
+                <div class="grid md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="200">
+                    <!-- Team member 1 -->
+                    <div
+                        class="bg-white rounded-lg p-6 shadow-md text-center transform transition-all duration-300 hover:shadow-xl hover:translate-y-[-10px]">
+                        <img src="../src/assets/images/team/portrait-senior-woman-professional-blazer-outdoors.jpg"
+                            alt="Team Member"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 hover:scale-105 transition-transform duration-300">
+                        <h3 class="text-xl font-bold text-mint-800">Maria Rodriguez</h3>
+                        <p class="text-gray-600">Founder & Executive Director</p>
+                        <p class="text-sm text-gray-500 mt-2">A social entrepreneur with 15 years of experience in
+                            community development</p>
+                    </div>
+                    <!-- Team member 2 -->
+                    <div
+                        class="bg-white rounded-lg p-6 shadow-md text-center transform transition-all duration-300 hover:shadow-xl hover:translate-y-[-10px]">
+                        <img src="../src/assets/images/team/cheerful-guy-enjoying-outdoor-coffee-break.jpg"
+                            alt="Team Member"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 hover:scale-105 transition-transform duration-300">
+                        <h3 class="text-xl font-bold text-mint-800">David Kimani</h3>
+                        <p class="text-gray-600">Director of Programs</p>
+                        <p class="text-sm text-gray-500 mt-2">Expert in sustainable agriculture and community capacity
+                            building</p>
+                    </div>
+                    <!-- Team member 3 -->
+                    <div
+                        class="bg-white rounded-lg p-6 shadow-md text-center transform transition-all duration-300 hover:shadow-xl hover:translate-y-[-10px]">
+                        <img src="../src/assets/images/team/smiling-asian-woman-posing-front-escalator-with-finger-touching-cheek.jpg"
+                            alt="Team Member"
+                            class="w-32 h-32 rounded-full mx-auto mb-4 hover:scale-105 transition-transform duration-300">
+                        <h3 class="text-xl font-bold text-mint-800">Sarah Chen</h3>
+                        <p class="text-gray-600">Chief Impact Officer</p>
+                        <p class="text-sm text-gray-500 mt-2">Global health and education specialist with a passion for
+                            innovation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Approach section -->
+        <section class="bg-pink-100 py-16 text-center">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-mint-900 mb-8" data-aos="fade-up">
+                    Our Approach
+                </h2>
+                <div class="max-w-4xl mx-auto space-y-6 text-gray-700">
+                    <p style="animation-delay: 0.2s;" data-aos="fade-up" data-aos-delay="100">At HopeBuilders, we
+                        believe in
+                        empowerment through collaboration. We don't just provide temporary
+                        solutions; we work alongside communities to build lasting capabilities, resilience, and hope.
+                    </p>
+                    <p style="animation-delay: 0.3s;" data-aos="fade-up" data-aos-delay="200">Our holistic approach
+                        integrates
+                        education, health, economic development, and environmental
+                        sustainability to create comprehensive, long-term impact.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Values section -->
+        <section class="bg-white py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-mint-900 mb-12" data-aos="fade-up">
+                    Our Core Values
+                </h2>
+                <!-- Core values grid -->
+                <div class="grid md:grid-cols-4 gap-8" data-aos="fade-up" data-aos-delay="100" role="list"
+                    aria-label="Our core values">
+                    <!-- Value 1: Compassion -->
+                    <div class="bg-lavender-50 rounded-lg p-6 shadow-md text-center transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                        role="listitem">
+                        <div class="text-4xl mb-4 text-mint-600 animate-float" aria-hidden="true">❤️</div>
+                        <h3 class="text-xl font-bold text-mint-800 mb-2">Compassion</h3>
+                        <p class="text-gray-600">We lead with empathy, understanding, and genuine care for every
+                            individual</p>
+                    </div>
+
+                    <!-- Value 2: Collaboration -->
+                    <div class="bg-lavender-50 rounded-lg p-6 shadow-md text-center transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                        role="listitem">
+                        <div class="text-4xl mb-4 text-mint-600 animate-float" aria-hidden="true">🤝</div>
+                        <h3 class="text-xl font-bold text-mint-800 mb-2">Collaboration</h3>
+                        <p class="text-gray-600">We believe in partnership and building solutions together with
+                            communities</p>
+                    </div>
+
+                    <!-- Value 3: Sustainability -->
+                    <div class="bg-lavender-50 rounded-lg p-6 shadow-md text-center transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                        role="listitem">
+                        <div class="text-4xl mb-4 text-mint-600 animate-float" aria-hidden="true">🌱</div>
+                        <h3 class="text-xl font-bold text-mint-800 mb-2">Sustainability</h3>
+                        <p class="text-gray-600">We develop long-term solutions that communities can maintain and grow
+                        </p>
+                    </div>
+
+                    <!-- Value 4: Innovation -->
+                    <div class="bg-lavender-50 rounded-lg p-6 shadow-md text-center transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                        role="listitem">
+                        <div class="text-4xl mb-4 text-mint-600 animate-float" aria-hidden="true">💡</div>
+                        <h3 class="text-xl font-bold text-mint-800 mb-2">Innovation</h3>
+                        <p class="text-gray-600">We constantly seek creative, effective approaches to complex challenges
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="bg-pink-900 text-white py-8">
+            <div class="container mx-auto px-4 text-center">
+                <div class="mb-4">
+                    <span class="text-xl font-bold">HopeBuilders</span>
+                </div>
+                <div class="mb-4 space-x-4">
+                    <a href="#" class="text-lavender-200 hover:text-white transition">Privacy</a>
+                    <a href="#" class="text-lavender-200 hover:text-white transition">Terms</a>
+                    <a href="#" class="text-lavender-200 hover:text-white transition">Sitemap</a>
+                </div>
+                <p class="text-sm text-lavender-300">
+                    © 2024 HopeBuilders Nonprofit. All Rights Reserved.
+                </p>
+            </div>
+        </footer>
+    </main>
 </body>
+<script type="module" src="../src/js/app.js" defer></script>
 
 </html>

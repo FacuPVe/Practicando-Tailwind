@@ -1,0 +1,17 @@
+# Dependencias
+node_modules/
+dist/
+
+# Variables de entorno
+.env
+.env.local
+.env.*.local
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+

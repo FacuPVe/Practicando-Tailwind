@@ -1,19 +1,26 @@
 {
   "name": "mi-proyecto-tailwind",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sitio web para una organización sin ánimo de lucro ficticia llamada 'HopeBuilders'",
   "main": "src/js/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "tailwindcss -i ./src/css/input.css -o ./dist/output.css --minify"
+    "dev": "npm run watch-css & serve public",
+    "build": "npm run build-css && npm run optimize-images",
+    "watch-css": "tailwindcss -i ./src/css/input.css -o ./dist/output.css --watch",
+    "build-css": "tailwindcss -i ./src/css/input.css -o ./dist/output.css --minify",
+    "optimize-images": "node scripts/optimize-images.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "dependencies": {
+    "caniuse-lite": "^1.0.30001702",
     "tailwindcss": "^3.3.6"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1"
   }
 }
-
-
-

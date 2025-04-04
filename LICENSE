@@ -1,0 +1,54 @@
+HopeBuilders Project
+Copyright (c) 2024 Facundo Ezequiel. All rights reserved.
+
+Literal copy of the code is not allowed.
+
+-------------------------------------------------------------------------------
+
+THIRD-PARTY ATTRIBUTIONS
+
+1. MULTIMEDIA RESOURCES
+This project incorporates third-party multimedia resources under their respective licenses:
+
+Videos:
+- Video by Minh Võ Thanh from Pixabay
+  Source: https://pixabay.com/users/vtmsolver-9454172/
+
+Images:
+- Photo by Ron Lach from Pexels
+  Source: https://www.pexels.com/es-es/foto/hombre-playa-mujer-en-pie-9037600/
+
+- Photo by Ivan Samkov from Pexels
+  Source: https://www.pexels.com/es-es/foto/movimiento-cartel-campana-mascara-facial-9643282/
+
+- Photo by mk from Pexels
+  Source: https://www.pexels.com/es-es/foto/nino-alegre-comiendo-al-aire-libre-en-kaduna-nigeria-30598328/
+
+- Photo by Larm Rmah on Unsplash
+  Source: https://unsplash.com/es/fotos/cinco-ninos-sonriendo-mientras-hacen-la-senal-de-la-paz-con-la-mano-AEaTUnvneik
+
+- Photo by RDNE Stock project from Pexels
+  Source: https://www.pexels.com/es-es/foto/vehiculos-amor-gente-calle-6646775/
+
+Freepik Images (with downloaded licenses in 'licenses' folder):
+- Image by pressfoto: "Smiling asian woman posing in front of escalator"
+  Source: https://www.freepik.com/free-photo/smiling-asian-woman-posing-front-escalator-with-finger-touching-cheek_5576723.htm
+  License: licenses/license-smiling-asian-woman-posing-in-front-of-escalator-with-finger-touching-cheek-5576723.pdf
+
+- Image by freepik: "Portrait of senior woman in professional blazer"
+  Source: https://www.freepik.com/free-photo/portrait-senior-woman-professional-blazer-outdoors_40320510.htm
+  License: licenses/license-portrait-of-senior-woman-in-professional-blazer-outdoors-40320510.pdf
+
+- Image by katemangostar: "Cheerful guy enjoying outdoor coffee break"
+  Source: https://www.freepik.com/free-photo/cheerful-guy-enjoying-outdoor-coffee-break_4997448.htm
+  License: licenses/license-cheerful-guy-enjoying-outdoor-coffee-break-4997448.pdf
+
+- Logo by freepik: "Hand drawn flat design occupational therapy logo"
+  Source: https://www.freepik.com/free-vector/hand-drawn-flat-design-occupational-therapy-logo_25035171.htm
+  License: licenses/license-hand-drawn-flat-design-occupational-therapy-logo-25035171.pdf
+
+2. TECHNOLOGIES AND DEPENDENCIES
+This project uses several open-source packages:
+- tailwindcss: MIT License
+- caniuse-lite: CC-BY-4.0
+- AOS (Animate on Scroll): MIT License

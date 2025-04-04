@@ -2,42 +2,524 @@
 <html lang="en">
 
 <head>
+    <!-- Metadata and links to stylesheets and scripts -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../dist/output.css" rel="stylesheet">
-    <title>Home - Nonprofit</title>
+    <link href="../src/css/animations.css" rel="stylesheet">
+    <title>Home - HopeBuilders</title>
+    <link rel="icon"
+        href="../src/assets/branding/logos/transparentfreepik-hand-drawn-holding-hands-non-profit-organization-logo-202503051912495Rcc.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+    <meta name="description"
+        content="HopeBuilders: empowering communities through sustainable development and compassionate support. Join our mission to create positive change around the world.">
+    <meta name="keywords" content="nonprofit, charity, community development, volunteer, donate, sustainable solutions">
+    <meta property="og:title" content="Home - HopeBuilders">
+    <meta property="og:description" content="Building Hope, Creating Change - Join our mission to empower communities.">
+    <meta property="og:image"
+        content="../src/assets/branding/logos/transparentfreepik-hand-drawn-holding-hands-non-profit-organization-logo-202503051912495Rcc.png">
 </head>
 
-<body class="flex flex-col min-h-screen font-sans bg-gradient-to-r from-red-800 to-blue-800 text-gray-800">
-    <header class="bg-cover bg-center p-6 text-center" style="background-image: url('path_to_your_header_image.jpg');">
-        <h1 class="text-5xl font-bold mb-4">Welcome to Our Nonprofit</h1>
-        <nav class="text-lg">
-            <a href="#" class="text-white hover:text-red-300 mx-4">Home</a>
-            <a href="about.html" class="text-white hover:text-red-300 mx-4">About Us</a>
-            <a href="contact.html" class="text-white hover:text-red-300 mx-4">Contact</a>
-        </nav>
+<body class="min-h-screen bg-pink-50 text-gray-800">
+    <!-- Header with navigation -->
+    <header class="bg-white/90 backdrop-blur-md shadow-md p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-xl font-bold text-pink-800">HopeBuilders</span>
+            </div>
+            <nav class="hidden md:flex space-x-6" aria-label="Main navigation">
+                <a href="home.html" class="text-pink-700 hover:text-pink-900 transition">Home</a>
+                <a href="about.html" class="text-pink-700 hover:text-pink-900 transition">About</a>
+                <a href="programs.html" class="text-pink-700 hover:text-pink-900 transition">Programs</a>
+                <a href="donate.html" class="text-pink-700 hover:text-pink-900 transition">Donate</a>
+                <a href="contact.html" class="text-pink-700 hover:text-pink-900 transition">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-pink-700 hover:text-pink-900 transition"
+                aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                <!-- Mobile menu button icon -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
     </header>
-    <main class="flex-grow p-10">
-        <section class="mb-10">
-            <h2 class="text-4xl font-semibold mb-5">Our Mission</h2>
-            <p class="text-xl">Discover the mission and goals of our nonprofit organization.</p>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="fixed left-0 w-full bg-white shadow-lg overflow-hidden">
+            <div class="p-6">
+                <button id="close-mobile-menu" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                    <!-- Close button icon -->
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+                <nav class="mt-8 space-y-4">
+                    <a href="home.html" class="block text-pink-700 hover:text-pink-900 transition">Home</a>
+                    <a href="about.html" class="block text-pink-700 hover:text-pink-900 transition">About</a>
+                    <a href="programs.html" class="block text-pink-700 hover:text-pink-900 transition">Programs</a>
+                    <a href="donate.html" class="block text-pink-700 hover:text-pink-900 transition">Donate</a>
+                    <a href="contact.html" class="block text-pink-700 hover:text-pink-900 transition">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero section with video background -->
+        <section class="relative overflow-hidden min-h-[93vh]">
+            <div class="absolute inset-0 w-full h-full">
+                <video class="object-cover w-full h-full opacity-40" autoplay loop muted playsinline preload="none">
+                    <source src="../src/assets/videos/banners/video-hero-section.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div
+                class="relative z-10 bg-gradient-to-br to-lavender-100/90 py-32 text-center min-h-[90vh] flex items-center">
+                <div class="container mx-auto px-4">
+                    <h1 class="text-4xl md:text-6xl font-bold text-pink-900 mb-6 animate-fade-in-up">
+                        Building Hope, Creating Change
+                    </h1>
+                    <p class="text-xl text-gray-700 max-w-2xl mx-auto mb-8 animate-fade-in-up"
+                        style="animation-delay: 0.2s;">
+                        We empower communities through sustainable development and compassionate support.
+                    </p>
+                    <div class="space-x-4">
+                        <button
+                            class="bg-pink-600 text-white px-6 py-3 rounded-full hover:bg-pink-700 transition transform hover:scale-105 duration-300">
+                            Our Mission
+                        </button>
+                        <button
+                            class="bg-lavender-500 text-white px-6 py-3 rounded-full hover:bg-lavender-600 transition transform hover:scale-105 duration-300">
+                            Donate Now
+                        </button>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="mb-10">
-            <h2 class="text-4xl font-semibold mb-5">Get Involved</h2>
-            <p class="text-xl">Find out how you can support and engage with our organization.</p>
+
+        <!-- Mission section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-pink-900 mb-10">
+                    Our Mission
+                </h2>
+                <div class="grid md:grid-cols-3 gap-8" role="list" aria-label="Mission statements">
+                    <!-- Mission Card 1 -->
+                    <article class="mission-card h-full" role="listitem">
+                        <div
+                            class="bg-pink-50 border-none shadow-md p-6 rounded-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group h-full flex flex-col">
+                            <span class="text-4xl mb-4 animate-float block" aria-hidden="true">🌱</span>
+                            <h3
+                                class="text-xl font-bold text-pink-800 mb-2 group-hover:text-pink-900 transition-colors">
+                                Empower
+                            </h3>
+                            <p class="text-gray-700">
+                                Supporting local communities through education and skill development.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Mission Card 2 -->
+                    <article class="mission-card h-full" role="listitem">
+                        <div
+                            class="bg-pink-50 border-none shadow-md p-6 rounded-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group h-full flex flex-col">
+                            <span class="text-4xl mb-4 animate-float block" aria-hidden="true">💡</span>
+                            <h3
+                                class="text-xl font-bold text-pink-800 mb-2 group-hover:text-pink-900 transition-colors">
+                                Innovate
+                            </h3>
+                            <p class="text-gray-700">
+                                Developing sustainable solutions for social challenges.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Mission Card 3 -->
+                    <article class="mission-card h-full" role="listitem">
+                        <div
+                            class="bg-pink-50 border-none shadow-md p-6 rounded-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group h-full flex flex-col">
+                            <span class="text-4xl mb-4 animate-float block" aria-hidden="true">🤝</span>
+                            <h3
+                                class="text-xl font-bold text-pink-800 mb-2 group-hover:text-pink-900 transition-colors">
+                                Connect
+                            </h3>
+                            <p class="text-gray-700">
+                                Bridging resources and opportunities across communities.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs section -->
+        <section class="bg-lavender-50 py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-pink-900 mb-10">
+                    Our Programs
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Program Card 1 -->
+                    <div class="program-card h-full">
+                        <div
+                            class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group h-full flex flex-col">
+                            <span class="text-4xl mb-4 animate-float block" aria-hidden="true">📚</span>
+                            <h3
+                                class="text-xl font-bold text-pink-800 mb-2 group-hover:text-pink-900 transition-colors">
+                                Education Support</h3>
+                            <p class="text-gray-700">Scholarships and learning resources for underprivileged youth.</p>
+                        </div>
+                    </div>
+                    <!-- Program Card 2 -->
+                    <div class="program-card h-full">
+                        <div
+                            class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group h-full flex flex-col">
+                            <span class="text-4xl mb-4 animate-float block" aria-hidden="true">❤️</span>
+                            <h3
+                                class="text-xl font-bold text-pink-800 mb-2 group-hover:text-pink-900 transition-colors">
+                                Community Health</h3>
+                            <p class="text-gray-700">Medical camps and health awareness programs.</p>
+                        </div>
+                    </div>
+                    <!-- Program Card 3 -->
+                    <div class="program-card h-full">
+                        <div
+                            class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group h-full flex flex-col">
+                            <span class="text-4xl mb-4 animate-float block" aria-hidden="true">🌾</span>
+                            <h3
+                                class="text-xl font-bold text-pink-800 mb-2 group-hover:text-pink-900 transition-colors">
+                                Sustainable Agriculture</h3>
+                            <p class="text-gray-700">Training and resources for small-scale farmers.</p>
+                        </div>
+                    </div>
+                    <!-- Program Card 4 -->
+                    <div class="program-card h-full">
+                        <div
+                            class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group h-full flex flex-col">
+                            <span class="text-4xl mb-4 animate-float block" aria-hidden="true">💻</span>
+                            <h3
+                                class="text-xl font-bold text-pink-800 mb-2 group-hover:text-pink-900 transition-colors">
+                                Digital Literacy</h3>
+                            <p class="text-gray-700">Technology training for rural communities.</p>
+                        </div>
+                    </div>
+                    <!-- Program Card 5 -->
+                    <div class="program-card h-full">
+                        <div
+                            class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group h-full flex flex-col">
+                            <span class="text-4xl mb-4 animate-float block" aria-hidden="true">🌍</span>
+                            <h3
+                                class="text-xl font-bold text-pink-800 mb-2 group-hover:text-pink-900 transition-colors">
+                                Environmental Conservation</h3>
+                            <p class="text-gray-700">Ecological restoration and sustainability projects.</p>
+                        </div>
+                    </div>
+                    <!-- Program Card 6 -->
+                    <div class="program-card h-full">
+                        <div
+                            class="bg-white rounded-lg p-6 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group h-full flex flex-col">
+                            <span class="text-4xl mb-4 animate-float block" aria-hidden="true">🥫</span>
+                            <h3
+                                class="text-xl font-bold text-pink-800 mb-2 group-hover:text-pink-900 transition-colors">
+                                Food Distribution</h3>
+                            <p class="text-gray-700">Collection and distribution of donated food to families in need.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Global Impact section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-pink-900 mb-10">
+                    Global Impact
+                </h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6 animate-fade-in-up">
+                        <h3 class="text-2xl font-bold text-pink-800">Worldwide Volunteer Network</h3>
+                        <p class="text-gray-700 text-lg">
+                            Thanks to our dedicated volunteers across the globe, we're making a difference in
+                            communities worldwide. Our network of compassionate individuals brings hope and support to
+                            those who need it most.
+                        </p>
+                        <div class="grid grid-cols-2 gap-6 mt-8">
+                            <div class="text-center">
+                                <div class="text-4xl font-bold text-pink-600 animate-float">1000+</div>
+                                <p class="text-gray-600">Active Volunteers</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-4xl font-bold text-pink-600 animate-float">50+</div>
+                                <p class="text-gray-600">Countries Reached</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-center">
+                            <button
+                                class="bg-pink-600 text-white px-6 py-3 rounded-full hover:bg-pink-700 transition transform hover:scale-105 duration-300 mt-6">
+                                Join Our Volunteer Network
+                            </button>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <!-- Impact Card 1 -->
+                        <div class="fade-right h-full">
+                            <div
+                                class="bg-lavender-50 p-4 rounded-lg shadow-md transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group h-full flex flex-col">
+                                <span class="text-3xl mb-2 animate-float block" aria-hidden="true">🌎</span>
+                                <h4 class="font-bold text-pink-800 group-hover:text-pink-900 transition-colors">America
+                                </h4>
+                                <p class="text-sm text-gray-600">Supporting communities from Canada to Argentina</p>
+                            </div>
+                        </div>
+                        <!-- Impact Card 2 -->
+                        <div class="fade-right h-full">
+                            <div
+                                class="bg-lavender-50 p-4 rounded-lg shadow-md transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group h-full flex flex-col">
+                                <span class="text-3xl mb-2 animate-float block" aria-hidden="true">🌍</span>
+                                <h4 class="font-bold text-pink-800 group-hover:text-pink-900 transition-colors">Africa
+                                </h4>
+                                <p class="text-sm text-gray-600">Empowering local initiatives across the continent</p>
+                            </div>
+                        </div>
+                        <!-- Impact Card 3 -->
+                        <div class="fade-right h-full">
+                            <div
+                                class="bg-lavender-50 p-4 rounded-lg shadow-md transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group h-full flex flex-col">
+                                <span class="text-3xl mb-2 animate-float block" aria-hidden="true">🌏</span>
+                                <h4 class="font-bold text-pink-800 group-hover:text-pink-900 transition-colors">
+                                    Asia-Pacific</h4>
+                                <p class="text-sm text-gray-600">Building sustainable futures in diverse communities</p>
+                            </div>
+                        </div>
+                        <!-- Impact Card 4 -->
+                        <div class="fade-right h-full">
+                            <div
+                                class="bg-lavender-50 p-4 rounded-lg shadow-md transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group h-full flex flex-col">
+                                <span class="text-3xl mb-2 animate-float block" aria-hidden="true">🌍</span>
+                                <h4 class="font-bold text-pink-800 group-hover:text-pink-900 transition-colors">Europe
+                                </h4>
+                                <p class="text-sm text-gray-600">Collaborating with local organizations for change</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials section -->
+        <section class="py-16 bg-lavender-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-pink-900 mb-10">
+                    What People Say
+                </h2>
+                <div class="relative">
+                    <div class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 scrollbar-hide">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial snap-center shrink-0 w-full md:w-1/2 lg:w-1/3 flex-none h-full">
+                            <div
+                                class="bg-white p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group h-full flex flex-col">
+                                <div class="flex items-center mb-4">
+                                    <div class="h-12 w-12 rounded-full bg-pink-200 flex items-center justify-center">
+                                        <span class="text-2xl" aria-hidden="true">👤</span>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h3 class="font-bold text-pink-800 group-hover:text-pink-900 transition-colors">
+                                            John Doe</h3>
+                                        <p class="text-gray-600">Volunteer</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 italic">
+                                    "Working with HopeBuilders has been an incredible experience. The impact we've made
+                                    on communities is truly remarkable."
+                                </p>
+                                <div class="mt-4 text-pink-500">
+                                    ★★★★★
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial snap-center shrink-0 w-full md:w-1/2 lg:w-1/3 flex-none h-full">
+                            <div
+                                class="bg-white p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group h-full flex flex-col">
+                                <div class="flex items-center mb-4">
+                                    <div class="h-12 w-12 rounded-full bg-pink-200 flex items-center justify-center">
+                                        <span class="text-2xl" aria-hidden="true">👤</span>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h3 class="font-bold text-pink-800 group-hover:text-pink-900 transition-colors">
+                                            Jane Smith</h3>
+                                        <p class="text-gray-600">Community Member</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 italic">
+                                    "The programs offered by HopeBuilders have transformed our community. We're forever
+                                    grateful."
+                                </p>
+                                <div class="mt-4 text-pink-500">
+                                    ★★★★★
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial snap-center shrink-0 w-full md:w-1/2 lg:w-1/3 flex-none h-full">
+                            <div
+                                class="bg-white p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group h-full flex flex-col">
+                                <div class="flex items-center mb-4">
+                                    <div class="h-12 w-12 rounded-full bg-pink-200 flex items-center justify-center">
+                                        <span class="text-2xl" aria-hidden="true">👤</span>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h3 class="font-bold text-pink-800 group-hover:text-pink-900 transition-colors">
+                                            Maria Rodriguez</h3>
+                                        <p class="text-gray-600">Community Member</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 italic">
+                                    "The programs offered by HopeBuilders have transformed our community. We're forever
+                                    grateful."
+                                </p>
+                                <div class="mt-4 text-pink-500">
+                                    ★★★★★
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 4 -->
+                        <div class="testimonial snap-center shrink-0 w-full md:w-1/2 lg:w-1/3 flex-none h-full">
+                            <div
+                                class="bg-white p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group h-full flex flex-col">
+                                <div class="flex items-center mb-4">
+                                    <div class="h-12 w-12 rounded-full bg-pink-200 flex items-center justify-center">
+                                        <span class="text-2xl" aria-hidden="true">👤</span>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h3 class="font-bold text-pink-800 group-hover:text-pink-900 transition-colors">
+                                            David Chen</h3>
+                                        <p class="text-gray-600">Donor</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 italic">
+                                    "Seeing my contributions make a real difference has been incredibly rewarding.
+                                    HopeBuilders truly delivers on their promises."
+                                </p>
+                                <div class="mt-4 text-pink-500">
+                                    ★★★★★
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonials navigation -->
+                    <div class="flex justify-center mt-6 gap-2" role="tablist" aria-label="Testimonials navigation">
+                        <button class="h-3 w-3 rounded-full bg-pink-600" aria-label="View testimonial 1"
+                            aria-selected="true" role="tab"></button>
+                        <button class="h-3 w-3 rounded-full bg-pink-300 hover:bg-pink-600 transition-colors"
+                            aria-label="View testimonial 2" aria-selected="false" role="tab"></button>
+                        <button class="h-3 w-3 rounded-full bg-pink-300 hover:bg-pink-600 transition-colors"
+                            aria-label="View testimonial 3" aria-selected="false" role="tab"></button>
+                        <button class="h-3 w-3 rounded-full bg-pink-300 hover:bg-pink-600 transition-colors"
+                            aria-label="View testimonial 4" aria-selected="false" role="tab"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <section class="bg-gradient-to-br from-pink-100 to-lavender-100 py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-pink-900 mb-4">
+                    Get in Touch
+                </h2>
+                <p class="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
+                    Have questions or want to get involved? We'd love to hear from you.
+                </p>
+                <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+                    <!-- Contact illustration -->
+                    <div class="hidden md:block relative">
+                        <img src="../src/assets/images/home/contact-home-page.jpg" alt="Contact illustration"
+                            class="w-full h-full object-cover rounded-2xl shadow-lg animate-float" loading="lazy">
+                        <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg">
+                            <h3 class="text-pink-800 font-semibold mb-2">Contact Information</h3>
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <p class="flex items-center gap-2">
+                                    <span>📍</span> 123 Hope Street, City, Country
+                                </p>
+                                <p class="flex items-center gap-2">
+                                    <span>📞</span> +1 234 567 890
+                                </p>
+                                <p class="flex items-center gap-2">
+                                    <span>✉️</span> hello@hopebuilders.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contact form -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl">
+                        <form class="space-y-6">
+                            <div>
+                                <label for="full-name" class="block text-pink-800 font-medium mb-2">Full Name</label>
+                                <input id="full-name" type="text" required
+                                    class="w-full p-3 border border-lavender-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 hover:border-pink-500 bg-lavender-50/30"
+                                    placeholder="Enter your name" />
+                            </div>
+                            <div>
+                                <label class="block text-pink-800 font-medium mb-2">Email Address</label>
+                                <input type="email" required
+                                    class="w-full p-3 border border-lavender-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 hover:border-pink-500 bg-lavender-50/30"
+                                    placeholder="Enter your email" />
+                            </div>
+                            <div>
+                                <label class="block text-pink-800 font-medium mb-2">Subject</label>
+                                <select
+                                    class="w-full p-3 border border-lavender-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 hover:border-pink-500 bg-lavender-50/30">
+                                    <option>General Inquiry</option>
+                                    <option>Volunteer Opportunities</option>
+                                    <option>Donation Questions</option>
+                                    <option>Partnership Proposals</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-pink-800 font-medium mb-2">Message</label>
+                                <textarea required rows="4"
+                                    class="w-full p-3 border border-lavender-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 hover:border-pink-500 bg-lavender-50/30"
+                                    placeholder="How can we help you?"></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-pink-600 text-white py-4 rounded-lg hover:bg-pink-700 transition transform hover:scale-[1.02] duration-300 font-medium shadow-lg hover:shadow-xl">
+                                Send Message
+                            </button>
+                            <p class="text-center text-sm text-gray-500 mt-4">
+                                We'll get back to you within 24-48 hours
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-    <footer class="bg-gray-800 text-white text-center p-6 fixed bottom-0 left-0 right-0">
-        <p class="mb-2">&copy; 2023 Nonprofit. All rights reserved.</p>
-        <div>
-            <a href="#" class="text-white hover:text-red-300 mx-2">Facebook</a>
-            <a href="#" class="text-white hover:text-red-300 mx-2">Twitter</a>
-            <a href="#" class="text-white hover:text-red-300 mx-2">Instagram</a>
+
+    <!-- Footer -->
+    <footer class="bg-pink-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-4">
+                <span class="text-xl font-bold">HopeBuilders</span>
+            </div>
+            <div class="mb-4 space-x-4">
+                <a href="#" class="text-lavender-200 hover:text-white transition">Privacy</a>
+                <a href="#" class="text-lavender-200 hover:text-white transition">Terms</a>
+                <a href="#" class="text-lavender-200 hover:text-white transition">Sitemap</a>
+            </div>
+            <p class="text-sm text-lavender-300">
+                © 2024 HopeBuilders Nonprofit. All Rights Reserved.
+            </p>
         </div>
     </footer>
 </body>
+<script type="module" src="../src/js/app.js"></script>
 
 </html>
-
-
-

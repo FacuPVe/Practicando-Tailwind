@@ -1,42 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Metadata and links to stylesheets and scripts -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - HopeBuilders</title>
     <link href="../dist/output.css" rel="stylesheet">
-    <title>Contact - Nonprofit</title>
+    <link href="../src/css/animations.css" rel="stylesheet">
+    <link rel="icon"
+        href="../src/assets/branding/logos/transparentfreepik-hand-drawn-holding-hands-non-profit-organization-logo-202503051912495Rcc.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+    <meta name="description"
+        content="Get in touch with HopeBuilders. We're here to answer your questions, collaborate on initiatives, and work together for positive change.">
+    <meta name="keywords"
+        content="contact us, get in touch, nonprofit contact, volunteer inquiries, donation support, partnership opportunities">
+    <meta property="og:title" content="Contact - HopeBuilders">
+    <meta property="og:description"
+        content="Connect with us and be part of the change - Together we can make a difference">
+    <meta property="og:image"
+        content="../src/assets/branding/logos/transparentfreepik-hand-drawn-holding-hands-non-profit-organization-logo-202503051912495Rcc.png">
 </head>
-<body class="font-sans bg-gray-100">
-    <header class="bg-black text-yellow-400 p-6 text-center">
-        <h1 class="text-4xl font-bold mb-4">Contact</h1>
-        <nav>
-            <a href="home.html" class="text-yellow-300 hover:text-yellow-200 mx-3">Home</a>
-            <a href="about.html" class="text-yellow-300 hover:text-yellow-200 mx-3">About Us</a>
-            <a href="#" class="text-yellow-300 hover:text-yellow-200 mx-3">Contact</a>
-        </nav>
+
+<body class="min-h-screen bg-pink-50 text-gray-800 overflow-x-hidden">
+    <!-- Header with navigation -->
+    <header class="bg-white/90 backdrop-blur-md shadow-md p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-xl font-bold text-pink-800">HopeBuilders</span>
+            </div>
+            <nav class="hidden md:flex space-x-6" aria-label="Main navigation">
+                <a href="home.html" class="text-pink-700 hover:text-pink-900 transition">Home</a>
+                <a href="about.html" class="text-pink-700 hover:text-pink-900 transition">About</a>
+                <a href="programs.html" class="text-pink-700 hover:text-pink-900 transition">Programs</a>
+                <a href="donate.html" class="text-pink-700 hover:text-pink-900 transition">Donate</a>
+                <a href="contact.html" class="text-pink-700 hover:text-pink-900 transition">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-pink-700 hover:text-pink-900 transition"
+                aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                <!-- Mobile menu button icon -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
     </header>
 
-    <main class="p-8">
-        <section class="mb-8">
-            <h2 class="text-3xl text-blue-600 mb-6">Get in Touch</h2>
-            <form action="#" method="post" class="space-y-6">
-                <input type="text" placeholder="Name" class="w-full p-3 border-2 border-gray-300 rounded-lg">
-                <input type="email" placeholder="Email" class="w-full p-3 border-2 border-gray-300 rounded-lg">
-                <textarea placeholder="Your Message" class="w-full p-3 border-2 border-gray-300 rounded-lg h-40"></textarea>
-                <button type="submit" class="w-full bg-red-800 hover:bg-red-600 text-white p-3 rounded-lg">Send</button>
-            </form>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="fixed left-0 w-full bg-white shadow-lg overflow-hidden">
+            <div class="p-6">
+                <button id="close-mobile-menu" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                    <!-- Close button icon -->
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+                <nav class="mt-8 space-y-4">
+                    <a href="home.html" class="block text-pink-700 hover:text-pink-900 transition">Home</a>
+                    <a href="about.html" class="block text-pink-700 hover:text-pink-900 transition">About</a>
+                    <a href="programs.html" class="block text-pink-700 hover:text-pink-900 transition">Programs</a>
+                    <a href="donate.html" class="block text-pink-700 hover:text-pink-900 transition">Donate</a>
+                    <a href="contact.html" class="block text-pink-700 hover:text-pink-900 transition">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <main>
+        <!-- Hero section -->
+        <section class="bg-gradient-to-br from-pink-100 to-lavender-100 py-20 text-center opacity-0" id="mainContent">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl md:text-6xl font-bold text-mint-900 mb-6" data-aos="fade-up" data-aos-delay="200">
+                    Contact HopeBuilders
+                </h1>
+                <p class="text-xl text-gray-700 max-w-2xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="200">
+                    We're here to listen, collaborate, and make a difference together
+                </p>
+            </div>
         </section>
 
-        <section class="mb-8">
-            <h2 class="text-3xl text-blue-600 mb-6">Other Ways to Contact Us</h2>
-            <p class="mb-2">Phone: 123-456-7890</p>
-            <p class="mb-2">Email: info@nonprofit.org</p>
-            <p>Address: 123 Example Street, City, Country</p>
+        <!-- Contact form section -->
+        <section class="bg-white py-16">
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div data-aos="fade-right" data-aos-delay="200">
+                        <h2 class="text-3xl font-bold text-mint-900 mb-6">
+                            Get in Touch
+                        </h2>
+                        <form class="space-y-6" id="contactForm" aria-label="Contact form">
+                            <!-- Name input -->
+                            <div class="transform transition-all duration-300 hover:translate-y-[-2px]">
+                                <label for="fullName" class="block text-mint-800 mb-2">Name *</label>
+                                <input type="text" id="fullName" name="fullName" required
+                                    class="w-full p-3 border border-lavender-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-mint-500 focus:border-transparent transition-all duration-300 hover:border-mint-500 bg-lavender-50/30"
+                                    placeholder="Enter your full name" aria-required="true" />
+                                <span class="text-red-500 text-sm hidden" role="alert">Please enter your name</span>
+                            </div>
+                            <!-- Email input -->
+                            <div class="transform transition-all duration-300 hover:translate-y-[-2px]">
+                                <label for="email" class="block text-mint-800 mb-2">Email *</label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full p-3 border border-lavender-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-mint-500 focus:border-transparent transition-all duration-300 hover:border-mint-500 bg-lavender-50/30"
+                                    placeholder="your@email.com" aria-required="true" />
+                                <span class="text-red-500 text-sm hidden" role="alert">Please enter a valid email</span>
+                            </div>
+                            <!-- Subject selection -->
+                            <div class="transform transition-all duration-300 hover:translate-y-[-2px]">
+                                <label for="subject" class="block text-mint-800 mb-2">Subject *</label>
+                                <select id="subject" name="subject" required
+                                    class="w-full p-3 border border-lavender-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-mint-500 focus:border-transparent transition-all duration-300 hover:border-mint-500 bg-lavender-50/30"
+                                    aria-required="true">
+                                    <option value="">Select a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="volunteer">Volunteer Opportunities</option>
+                                    <option value="donation">Donation Questions</option>
+                                    <option value="partnership">Partnership Proposals</option>
+                                </select>
+                            </div>
+                            <!-- Message textarea -->
+                            <div class="transform transition-all duration-300 hover:translate-y-[-2px]">
+                                <label for="message" class="block text-mint-800 mb-2">Message *</label>
+                                <textarea id="message" name="message" required rows="4"
+                                    class="w-full p-3 border border-lavender-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-mint-500 focus:border-transparent transition-all duration-300 hover:border-mint-500 bg-lavender-50/30"
+                                    placeholder="How can we help you?" aria-required="true"></textarea>
+                                <span class="text-red-500 text-sm hidden" role="alert">Please enter your message</span>
+                            </div>
+                            <!-- Submit button -->
+                            <button type="submit" id="submitButton"
+                                class="w-full bg-mint-600 text-white py-4 rounded-lg hover:bg-mint-700 transition transform hover:scale-[1.02] duration-300 font-medium shadow-lg hover:shadow-xl flex items-center justify-center">
+                                <span>Send Message</span>
+                                <div
+                                    class="hidden ml-2 animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent">
+                                </div>
+                            </button>
+                            <!-- Success and error messages -->
+                            <div id="formSuccess" class="hidden p-4 bg-green-100 text-green-700 rounded-lg">
+                                Message sent successfully! We'll get back to you soon.
+                            </div>
+                            <div id="formError" class="hidden p-4 bg-red-100 text-red-700 rounded-lg">
+                                There was an error sending your message. Please try again.
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Contact information -->
+                    <div class="space-y-8 overflow-x-hidden" data-aos="fade-left" data-aos-delay="200"
+                        role="complementary" aria-label="Contact Information">
+                        <h2 class="text-3xl font-bold text-mint-900 mb-6">
+                            Contact Information
+                        </h2>
+                        <div class="space-y-6 text-gray-700">
+                            <!-- Address -->
+                            <div
+                                class="bg-lavender-50 p-6 rounded-lg shadow-md transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                                <h3 class="font-bold text-mint-800 flex items-center gap-2">
+                                    <span class="text-2xl animate-float" aria-hidden="true">📍</span> Address
+                                </h3>
+                                <p class="mt-2">123 Hope Street, Global Village, World 12345</p>
+                            </div>
+                            <!-- Phone -->
+                            <div
+                                class="bg-lavender-50 p-6 rounded-lg shadow-md transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                                <h3 class="font-bold text-mint-800 flex items-center gap-2">
+                                    <span class="text-2xl animate-float" aria-hidden="true">📞</span> Phone
+                                </h3>
+                                <p class="mt-2">+1 (555) HOPE-123</p>
+                            </div>
+                            <!-- Email -->
+                            <div
+                                class="bg-lavender-50 p-6 rounded-lg shadow-md transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                                <h3 class="font-bold text-mint-800 flex items-center gap-2">
+                                    <span class="text-2xl animate-float" aria-hidden="true">✉️</span> Email
+                                </h3>
+                                <p class="mt-2">contact@hopebuilders.org</p>
+                            </div>
+                            <!-- Social Media -->
+                            <div
+                                class="bg-lavender-50 p-6 rounded-lg shadow-md transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                                <h3 class="font-bold text-mint-800 flex items-center gap-2">
+                                    <span class="text-2xl animate-float" aria-hidden="true">🌐</span> Social Media
+                                </h3>
+                                <div class="flex space-x-4 mt-2">
+                                    <a href="#" class="text-mint-700 hover:text-mint-900 transition">Facebook</a>
+                                    <a href="#" class="text-mint-700 hover:text-mint-900 transition">Twitter</a>
+                                    <a href="#" class="text-mint-700 hover:text-mint-900 transition">Instagram</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+
+        <!-- FAQ section -->
+        <section class="bg-white py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-mint-900 mb-10" data-aos="fade-up" data-aos-delay="200">
+                    Frequently Asked Questions
+                </h2>
+                <div class="max-w-3xl mx-auto space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="bg-lavender-50 rounded-lg transition-all duration-300 hover:shadow-md"
+                        data-aos="fade-up" data-aos-delay="300">
+                        <button class="w-full p-6 text-left focus:outline-none faq-button" onclick="toggleFAQ(this)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-bold text-mint-800">How can I volunteer?</h3>
+                                <svg class="w-6 h-6 transform transition-transform duration-300" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="hidden px-6 pb-6 text-gray-700 faq-answer">
+                            Fill out our contact form selecting "Volunteer Opportunities" as the subject, and our team
+                            will get back to you with available positions. We have opportunities both locally and
+                            internationally.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="bg-lavender-50 rounded-lg transition-all duration-300 hover:shadow-md"
+                        data-aos="fade-up" data-aos-delay="400">
+                        <button class="w-full p-6 text-left focus:outline-none faq-button" onclick="toggleFAQ(this)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-bold text-mint-800">How are donations used?</h3>
+                                <svg class="w-6 h-6 transform transition-transform duration-300" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="hidden px-6 pb-6 text-gray-700 faq-answer">
+                            100% of your donations go directly to our programs supporting communities in need. We
+                            provide detailed reports to all donors and maintain full transparency in our financial
+                            operations.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="bg-lavender-50 rounded-lg transition-all duration-300 hover:shadow-md"
+                        data-aos="fade-up" data-aos-delay="500">
+                        <button class="w-full p-6 text-left focus:outline-none faq-button" onclick="toggleFAQ(this)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-bold text-mint-800">Can organizations partner with HopeBuilders?</h3>
+                                <svg class="w-6 h-6 transform transition-transform duration-300" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="hidden px-6 pb-6 text-gray-700 faq-answer">
+                            Yes! We actively seek partnerships with organizations that share our values. Select
+                            "Partnership Proposals" in the contact form to start the conversation about potential
+                            collaboration opportunities.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="bg-lavender-50 rounded-lg transition-all duration-300 hover:shadow-md"
+                        data-aos="fade-up" data-aos-delay="600">
+                        <button class="w-full p-6 text-left focus:outline-none faq-button" onclick="toggleFAQ(this)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-bold text-mint-800">What areas do your programs cover?</h3>
+                                <svg class="w-6 h-6 transform transition-transform duration-300" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="hidden px-6 pb-6 text-gray-700 faq-answer">
+                            Our programs focus on education, healthcare, sustainable agriculture, and community
+                            development. We operate in over 50 countries, adapting our approach to local needs and
+                            contexts.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="bg-lavender-50 rounded-lg transition-all duration-300 hover:shadow-md"
+                        data-aos="fade-up" data-aos-delay="700">
+                        <button class="w-full p-6 text-left focus:outline-none faq-button" onclick="toggleFAQ(this)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-bold text-mint-800">Is my donation tax-deductible?</h3>
+                                <svg class="w-6 h-6 transform transition-transform duration-300" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="hidden px-6 pb-6 text-gray-700 faq-answer">
+                            Yes, HopeBuilders is a registered 501(c)(3) nonprofit organization. All donations are
+                            tax-deductible to the extent allowed by law. We provide donation receipts for tax purposes.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="bg-lavender-50 rounded-lg transition-all duration-300 hover:shadow-md"
+                        data-aos="fade-up" data-aos-delay="800">
+                        <button class="w-full p-6 text-left focus:outline-none faq-button" onclick="toggleFAQ(this)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-bold text-mint-800">How can I stay updated with your work?</h3>
+                                <svg class="w-6 h-6 transform transition-transform duration-300" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="hidden px-6 pb-6 text-gray-700 faq-answer">
+                            Follow us on social media, subscribe to our newsletter, and check our blog for regular
+                            updates. We share success stories, upcoming events, and opportunities to get involved.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support section -->
+        <section class="bg-lavender-50 py-16 text-center">
+            <div class="container mx-auto px-4" data-aos="fade-up" data-aos-delay="200">
+                <h2 class="text-3xl font-bold text-mint-900 mb-8">
+                    Support Our Mission
+                </h2>
+                <p class="max-w-2xl mx-auto text-gray-700 mb-6">
+                    Every message, collaboration, and contribution helps us create meaningful change. We welcome your
+                    ideas, support, and partnership.
+                </p>
+                <a href="#donate"
+                    class="bg-mint-600 text-white px-8 py-3 rounded-full hover:bg-mint-700 transition inline-block">
+                    Donate Now
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-pink-900 text-white py-8">
+            <div class="container mx-auto px-4 text-center">
+                <div class="mb-4">
+                    <span class="text-xl font-bold">HopeBuilders</span>
+                </div>
+                <div class="mb-4 space-x-4">
+                    <a href="#" class="text-lavender-200 hover:text-white transition">Privacy</a>
+                    <a href="#" class="text-lavender-200 hover:text-white transition">Terms</a>
+                    <a href="#" class="text-lavender-200 hover:text-white transition">Sitemap</a>
+                </div>
+                <p class="text-sm text-lavender-300">
+                    © 2024 HopeBuilders. All Rights Reserved.
+                </p>
+            </div>
+        </footer>
     </main>
-
-    <footer class="bg-black text-yellow-400 text-center p-4">
-        © 2023 Nonprofit. All rights reserved.
-    </footer>
 </body>
+<script type="module" src="../src/js/app.js"></script>
+<script type="module">
+    import { toggleFAQ } from '../src/js/faq.js';
+    window.toggleFAQ = toggleFAQ;
+</script>
+
 </html>
