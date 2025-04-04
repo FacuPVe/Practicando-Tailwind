@@ -2,6 +2,55 @@
 
 En este proyecto he estado practicando con **Tailwind CSS** iniciando con una base que se ha rediseñado y desarrollado una página web completa para una organización ficticia sin ánimo de lucro llamada "HopeBuilders".
 
+
+<details>
+<summary>  (Haz clic para poder ver una demo del sitio web)</summary>
+<h2>DEMO</h2>
+
+
+
+https://github.com/user-attachments/assets/9669a2c4-8882-4f94-ba3b-586d581815c5
+
+
+
+</details>
+
+## Estructura del Proyecto
+
+```
+/
+├── public/             # Páginas HTML del sitio (index.html, about.html, etc.)
+├── src/                # Código fuente principal
+│   ├── css/
+│   │   ├── input.css       # Archivo base donde se importan las directivas de Tailwind
+│   │   └── animations.css  
+│   ├── js/               # Scripts JavaScript (ej. main.js, menu.js)
+│   └── assets/           # Recursos estáticos
+│       ├── images/       # Imágenes optimizadas
+│       └── branding/     # Logos, iconos de marca
+├── dist/               # Carpeta de salida de la compilación (generada por 'npm run build')
+├── tailwind.config.js  # Configuración de Tailwind CSS
+├── package.json        # Dependencias de Node.js y scripts (dev, build)
+├── package-lock.json   # Versiones exactas de las dependencias
+├── .gitignore          # Archivos y carpetas a ignorar por Git (ej. node_modules, dist, .env)
+└── README.md           # Este archivo
+```
+
+## Páginas Implementadas
+
+* **Home (`index.html`):** Página principal con visión general de la organización.
+* **About (`about.html`):** Información detallada sobre la misión, visión y equipo.
+* **Donate (`donate.html`):** Página de donaciones (en desarrollo).
+* **Programs (`programs.html`):** Descripción de los programas ofrecidos (en desarrollo).
+* **Contact (`contact.html`):** Formulario de contacto e información relevante.
+
+## Tecnologías Utilizadas
+
+* HTML5
+* CSS3 / Tailwind CSS v3+
+* JavaScript (ES6 Modules)
+* Node.js / npm (para el entorno de desarrollo y build)
+
 ## Características Principales
 
 * **Diseño Responsive:** Adaptado a diferentes tamaños de pantalla utilizando las utilidades responsive de Tailwind.
@@ -13,13 +62,6 @@ En este proyecto he estado practicando con **Tailwind CSS** iniciando con una ba
 * **Estructura Semántica y Accesible:** Uso de HTML5 semántico y atributos ARIA básicos para mejorar la accesibilidad.
 * **Optimización:** Imágenes con `loading="lazy"`.
 * **Funcionalidad JavaScript:** Incluye observadores de intersección para animaciones al hacer scroll, manejo del menú móvil y lógica para testimoniales interactivos.
-
-## Tecnologías Utilizadas
-
-* HTML5
-* CSS3 / Tailwind CSS v3+
-* JavaScript (ES6 Modules)
-* Node.js / npm (para el entorno de desarrollo y build)
 
 ## Instalación y Puesta en Marcha
 
@@ -64,8 +106,8 @@ Se definieron colores personalizados que extienden la paleta por defecto de Tail
 // tailwind.config.js
 module.exports = {
   content: [
-    "./src/**/*.{html,js}",
-    // "./*.html" si tienes HTMLs en la raíz también
+    "./public/**/*.{html,js}",
+    "./src/**/*.{html,js}"
   ],
   theme: {
     extend: { // Es buena práctica poner las personalizaciones dentro de extend
@@ -167,35 +209,6 @@ A continuación se muestran algunos ejemplos de cómo se aplicó Tailwind en com
 
 *Nota: Esta tabla resume algunas de las clases más utilizadas. El proyecto hace un uso extensivo de muchas otras utilidades de Tailwind para lograr el diseño final.*
 </details>
-
-## Estructura del Proyecto
-
-```
-/
-├── public/             # Páginas HTML del sitio (index.html, about.html, etc.)
-├── src/                # Código fuente principal
-│   ├── css/
-│   │   ├── input.css       # Archivo base donde se importan las directivas de Tailwind
-│   │   └── animations.css  
-│   ├── js/               # Scripts JavaScript (ej. main.js, menu.js)
-│   └── assets/           # Recursos estáticos
-│       ├── images/       # Imágenes optimizadas
-│       └── branding/     # Logos, iconos de marca
-├── dist/               # Carpeta de salida de la compilación (generada por 'npm run build')
-├── tailwind.config.js  # Configuración de Tailwind CSS
-├── package.json        # Dependencias de Node.js y scripts (dev, build)
-├── package-lock.json   # Versiones exactas de las dependencias
-├── .gitignore          # Archivos y carpetas a ignorar por Git (ej. node_modules, dist, .env)
-└── README.md           # Este archivo
-```
-
-## Páginas Implementadas
-
-* **Home (`index.html`):** Página principal con visión general de la organización.
-* **About (`about.html`):** Información detallada sobre la misión, visión y equipo.
-* **Donate (`donate.html`):** Página de donaciones (en desarrollo).
-* **Programs (`programs.html`):** Descripción de los programas ofrecidos (en desarrollo).
-* **Contact (`contact.html`):** Formulario de contacto e información relevante.
 
 ## Créditos
 
