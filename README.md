@@ -4,7 +4,7 @@ En este proyecto he estado practicando con **Tailwind CSS** iniciando con una ba
 
 
 <details>
-<summary>  (Haz clic para poder ver una demo del sitio web)</summary>
+<summary> <b> (Haz clic para poder ver una demo del sitio web)</b></summary>
 <h2>DEMO</h2>
 
 
